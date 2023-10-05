@@ -26,6 +26,7 @@ import QuiezThree from '../pages/Blog/QuiezThree';
 import QuiezFour from '../pages/Blog/QuiezFour';
 import Payment from '../pages/Home/payment/Payment';
 import AllCatergory from '../pages/Home/AllCatergory';
+import ProductsDetails from '../pages/Home/ProductsDetails';
 
 
 
@@ -81,8 +82,14 @@ const router = createBrowserRouter([
           element: <Private><Products></Products></Private>  ,
           loader: ({params})=> fetch(`http://localhost:5000/api/v1/category/${params?.id}`)
       }
-,
+            ,
+            {
 
+                path: '/books/:id',
+                  element: <ProductsDetails/> ,
+                  loader: ({params})=> fetch(`http://localhost:5000/api/v1/stock/${params?.id}`)
+              }
+,
             { path: '/blog',
             element:<Blog></Blog>
             },

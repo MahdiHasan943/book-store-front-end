@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className="pt-10">
-      <div className="px-4 sm:px-16 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto FLEX">
+      <div className="px-8 sm:px-16 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto FLEX">
         <div className="">
           <h3 className='text-[#064532] font-semibold text-[18px] py-4  font-popping'>NEED HELP?</h3>
           <p className='text-[16px] text-[#767a79] font-popping '>          Help Center
@@ -59,7 +59,7 @@ const Footer = () => {
         <p className='text-[16px] text-[#767a79] font-popping py-2'>Contact us for early booking
           </p>
           <div className="flex  items-center">
-            <input placeholder='your email address' className='placeholder:text-[#767a79] px-4  border-[1px] border-[#e6e6e] py-4 bg-[#f0f0f0]' type="text" name="" id="" />
+            <input placeholder='your email address' className='placeholder:text-[#767a79] outline-none px-4  border-[1px] border-[#e6e6e] py-4 bg-[#f0f0f0]' type="text" name="" id="" />
             <div className="py-[14px] bg-[#064532] px-6 hover:bg-[#f1592b]">
             <img className=' w-[30px]  h-[30px]' src="/gmail-svgrepo-com.svg" alt="" />
 

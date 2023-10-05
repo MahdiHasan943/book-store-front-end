@@ -17,7 +17,7 @@ const CategoryCard = ({ service }) => {
             </div>
           
           <div className="px-5 flex  justify-center items-center">
-          <span className='text-black text-5xl sm:text-4xl font-bold md:text-2xl lg:text-4xl'> {name} <span className='font-semibold'> Book</span></span>
+          <span className='text-black text-[20px] font-sofia  sm:text-4xl font-bold sm:text-[30px] capitalize'> {name}  Book</span>
         
          </div>
        

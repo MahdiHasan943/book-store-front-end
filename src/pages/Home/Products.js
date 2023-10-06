@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import"./products.css"
 // import required modules
 import { Navigation, Pagination } from 'swiper';
 const Products = () => {
@@ -58,7 +58,8 @@ const Products = () => {
             slidesPerView: 4,
             spaceBetween: 30,
           },
-          }}
+        }}
+        
           slidesPerView={1}
           spaceBetween={30}
           pagination={{
@@ -68,10 +69,12 @@ const Products = () => {
             clickable: true,
           }}
           modules={[Navigation]}
-          className="   w-full  h-[600px]  lg:h-[800px]   mx-auto"
+        
+          
+          className=" mySwiper  w-full  h-[600px]  lg:h-[800px]   mx-auto"
         >
               {
-                  filter?.map(order => (
+                  filter?.map(order => (<>
                     <SwiperSlide className='my-10 h-[500px]  lg:h-[690px]   sm:mx-4 '>
                     <div className="w-[280px] mx-auto   lg:w-[370px] xl:w-[400px]  py-6 sm:px-5 lg:h-[690px] slidecard">
                               <div className="h-[420px] md:h-[380px] xl:h-[580px]  group hover:scale-105 ease-linear duration-200  overflow-hidden relative bg-cover bg-center bg-no-repeat  w-full" style={{ backgroundImage: `url(${order?.imageURLs[0]})` }}>
@@ -98,7 +101,8 @@ const Products = () => {
 
                               </div>
                     </div>
-                          </SwiperSlide>
+                    </SwiperSlide>
+                    </>
                       
                   ))
                   

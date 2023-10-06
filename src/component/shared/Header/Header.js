@@ -21,15 +21,20 @@ const Header = () => {
   
   
   const menu = <React.Fragment>
-  <li>
+    <div className="flex items-center">
+      <img src="/book.png" alt="" />
+      <p className='text-[40px] text-[#064532] font-Arimo font-bold'>BookStore</p>
+    </div>
+    <li>
+      
               <NavLink
                 to='/home'
                 aria-label='Home'
                 title='Home'
                 className={({ isActive }) =>
                   isActive
-                    ? 'font-bold tracking-wide text-[gold]  transition-colors duration-200 hover:text-deep-purple-accent-400'
-                    : 'font-medium tracking-wide text-[#e6e7e7] transition-colors duration-200 hover:text-deep-purple-accent-400'
+                    ? 'font-bold tracking-wide text-[#f1592b]  transition-colors duration-200 hover:text-deep-purple-accent-400'
+                    : 'font-medium tracking-wide text-gray-400  transition-colors duration-200 hover:text-deep-purple-accent-400'
                 }
               >
                 Home
@@ -42,8 +47,8 @@ const Header = () => {
                 title='blog'
                 className={({ isActive }) =>
                   isActive
-                    ? 'font-bold tracking-wide text-[gold]    transition-colors duration-200 hover:text-deep-purple-accent-400'
-                    : 'font-medium tracking-wide text-[#e6e7e7] transition-colors duration-200 hover:text-deep-purple-accent-400'
+                    ? 'font-bold tracking-wide text-[#f1592b]    transition-colors duration-200 hover:text-deep-purple-accent-400'
+                    : 'font-medium tracking-wide text-gray-400 transition-colors duration-200 hover:text-deep-purple-accent-400'
                 }
               >
                 Blog
@@ -60,8 +65,8 @@ const Header = () => {
               title='blog'
               className={({ isActive }) =>
                 isActive
-                ? 'font-bold tracking-wide text-[gold]    transition-colors duration-200 hover:text-deep-purple-accent-400'
-                : 'font-medium tracking-wide text-[#e6e7e7] transition-colors duration-200 hover:text-deep-purple-accent-400'
+                ? 'font-bold tracking-wide text-[#f1592b]    transition-colors duration-200 hover:text-deep-purple-accent-400'
+                : 'font-medium tracking-wide text-gray-400 transition-colors duration-200 hover:text-deep-purple-accent-400'
               }
             >
               Dashboard
@@ -78,41 +83,32 @@ const Header = () => {
     {
               user?.uid ?
         <>          
-<div className='btn border-none bg-none hidden sm:block bg-white outline-none sm:mx-4 my-4' onClick={handleLogOut}><Button3>Log Out</Button3></div>
+<div className='text-white font-semibold text-[14px] font-lato py-1 px-2 mx-2 bg-[#f1592b]' onClick={handleLogOut}><Button3>Log Out</Button3></div>
 <img className='w-[50px] h-[50px] rounded-full' title={user?.displayName}  src={user?.photoURL ? user.photoURL:<FaCentos></FaCentos>} alt="" />
         
       </>                 :
                   <>
-   <Link to='/login'><Button3>Log In</Button3>
+          <div className="'text-white font-semibold text-[14px] font-lato py-1 px-2 mx-2 bg-[#f1592b]">
+          <Link to='/login'><Button3>Log In</Button3>
 </Link>                     
-</>
+</div></> 
 }
   </React.Fragment>
   return (
     <>
       
-      <div className="navbar bg-base-100 grid grid-cols-2 sm:grid-cols-3 gap-4 px-4">
-        <div className="hidden sm:flex  justify-center">
-          <p className='px-3 text-2xl font-bold text-[#ff4157]'><FaPhoneVolume></FaPhoneVolume></p>
-          <p><span className='uppercase ml-2'>Call Us Now</span> <br /><span className='ml-[10px]'>0128443</span></p>
+      <div className="navbar bg-base-100 flex justify-between sm:px-20  w-full  gap-4 px-4 ">
+        <div className=" flex  justify-center">
+          <p className='px-3 text-2xl font-bold text-[#f1592b]'><FaPhoneVolume></FaPhoneVolume></p>
+          <div className='flex'><span className='capitalize hidden  ml-2 sm:inline'>Call Us Now</span> <br /><span className='ml-[10px]'>01843412068</span></div>
         </div>
 
 
-        <div className="flex justify-center">
-    <div className="btn btn-ghost normal-case text-xl "> <Link
-            to='/'
-            aria-label='proReader'
-            title='proReader'
-            className='inline-flex items-center'
-          >
-            <FaBookOpen className='text-[#ff4157] font-bold text-2xl'></FaBookOpen>
-           
-
-            <span className='ml-2 text-xl text-white font-bold tracking-wide #302e2c text-shadow-lg'>
-            <span className='text-[black]'> bookstore</span>
-
-            </span>
-          </Link></div>
+        <div className="flex  justify-center">
+          <div className="btn btn-ghost normal-case text-xl ">
+          
+          
+          </div>
         </div>
 
 
@@ -123,18 +119,26 @@ const Header = () => {
 
   
 </div>
-    <div className='bg-[#ff4157] shadow-lg'>
-      <div className='px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
-        <div className='relative flex items-center justify-between px-8'>
+
+    <div className='  py-2 mx-auto sm:px-16 px-4 '>
+      <div className=' '>
+        <div className='relative flex items-center justify-between px-4'>
          
-        <div className='lg:hidden'>
+            <div className='lg:hidden w-full flex justify-between items-center'>
+            <div className="flex items-center">
+      <img src="/book.png" alt="" />
+      <p className='text-[40px] text-[#064532] font-Arimo font-bold'>BookStore</p>
+              </div>
+              <div className="hidden sm:block">
+            <input  type="text" placeholder="Search book" className="input search-book  border-2 border-white bg-[#efefef]  w-full max-w-xs" />
+            </div>
             <div
               aria-label='Open Menu'
               title='Open Menu'
               className='p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50'
               onClick={() => setIsMenuOpen(true)}
             >
-              <svg className='w-5 text-white' viewBox='0 0 24 24'>
+              <svg className='w-5 text-[#f1592b]' viewBox='0 0 24 24'>
                 <path
                   fill='currentColor'
                   d='M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z'
@@ -155,7 +159,7 @@ const Header = () => {
                   <div className='flex items-center justify-between mb-4'>
                       <div>
                         <div className="   text center ">
-           <Link
+           {/* <Link
             to='/'
             aria-label='proReader'
             title='proReader'
@@ -168,7 +172,7 @@ const Header = () => {
             Book Store
 
             </p>
-          </Link>
+          </Link> */}
                         </div>
         
                       
@@ -213,9 +217,7 @@ const Header = () => {
             
             {menu}
             </ul>
-            <div className="">
-            <input  type="text" placeholder="Search book" className="input hidden sm:block  border-2 border-white  w-full max-w-xs" />
-            </div>
+         
            
             {
 
@@ -225,10 +227,7 @@ const Header = () => {
           </label>:''
 
             }
-           
-            {/* <label htmlFor="my-drawer-2" tabIndex={1} className="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 text-white w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-      </label> */}
+         
          
         </div>
       </div>

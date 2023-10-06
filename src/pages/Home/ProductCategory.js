@@ -19,7 +19,7 @@ console.log(services);
     console.log(filter);
   return (
     
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl py-8 mx-auto">
           <h1 className='d text-4xl font-semibold my-6 text-center '>Choose  Your Books Category</h1>
           <div className="text-center flex justify-center">
               <div className=' h-[2px] w-[200px] py-0 bg-[#ff4157]'></div>

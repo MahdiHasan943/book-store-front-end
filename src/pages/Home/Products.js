@@ -68,7 +68,7 @@ const Products = () => {
             clickable: true,
           }}
           modules={[Navigation]}
-          className="    w-full  h-[600px]  lg:h-[800px]   mx-auto"
+          className="   w-full  h-[600px]  lg:h-[800px]   mx-auto"
         >
               {
                   filter?.map(order => (

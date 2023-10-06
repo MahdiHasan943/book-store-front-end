@@ -7,7 +7,7 @@ const Special = () => {
 
     
   return (
-      <div className='py-8 m shadow-2xl mt-8 px-4'>
+      <div className='py-8  shadow-summery mt-8 px-4'>
           
           <h1 className='text-4xl my-3 font-semibold uppercase text-center'>Special Offer </h1>
           <div className="text-center flex justify-center">
@@ -22,7 +22,7 @@ const Special = () => {
           
 
 
-          <div className="grid mt-10 grid-col-1 sm:grid-cols-3 container">
+          <div className="grid mt-10 grid-col-1 mx-auto sm:grid-cols-3 container">
               
               <div className="" >
                   

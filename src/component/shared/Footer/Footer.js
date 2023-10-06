@@ -6,19 +6,19 @@ const Footer = () => {
       <div className="px-8 sm:px-16 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto FLEX">
         <div className="">
           <h3 className='text-[#064532] font-semibold text-[18px] py-4  font-popping'>NEED HELP?</h3>
-          <p className='text-[16px] text-[#767a79] font-popping '>          Help Center
+          <p className='text-[16px] text-[#767a79] hover:text-[#064532] font-popping '>          Help Center
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping  py-2'>Shipping FAQs
+          <p className='text-[16px] text-[#767a79] hover:text-[#064532] font-popping  py-2'>Shipping FAQs
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping '>Pick up in Store
+          <p className='text-[16px] text-[#767a79] hover:text-[#064532] font-popping '>Pick up in Store
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping py-2'>Order Status
+          <p className='text-[16px] text-[#767a79] hover:text-[#064532] font-popping py-2'>Order Status
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping '>Product Recalls
+          <p className='text-[16px] text-[#767a79] hover:text-[#064532] font-popping '>Product Recalls
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping py-2'>Corrections & Updates
+          <p className='text-[16px] text-[#767a79] hover:text-[#064532] font-popping py-2'>Corrections & Updates
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping '>Gift Cards
+          <p className='text-[16px] text-[#767a79] hover:text-[#064532] font-popping '>Gift Cards
 </p>
 
 
@@ -26,37 +26,37 @@ const Footer = () => {
         <div className="">
         <h3 className='font-semibold text-[#064532] text-[18px] py-4 font-popping'> ABOUT US
  </h3>
- <p className='text-[16px] text-[#767a79] font-popping '>        Contact Us
+ <p className='text-[16px] text-[#767a79] font-popping hover:text-[#064532]'>        Contact Us
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping  py-2'>Track Your Order
+          <p className='text-[16px] text-[#767a79] font-popping hover:text-[#064532] py-2'>Track Your Order
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping '>Returns Policy
+          <p className='text-[16px] text-[#767a79] font-popping hover:text-[#064532]'>Returns Policy
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping py-2'>Delivery Information
+          <p className='text-[16px] text-[#767a79] font-popping py-2 hover:text-[#064532]'>Delivery Information
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping '>Loyalty Program
+          <p className='text-[16px] text-[#767a79] font-popping hover:text-[#064532]'>Loyalty Program
 </p>
          
         </div>
         <div className="">
-        <h3 className='text-[#064532] text-[18px] font-semibold font-popping py-4'> CATEGORIES
+        <h3 className='text-[#064532]  text-[18px] font-semibold font-popping py-4'> CATEGORIES
 </h3>
-<p className='text-[16px] text-[#767a79] font-popping '>        Coupons
+<p className='text-[16px] text-[#767a79] font-popping hover:text-[#064532]'>        Coupons
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping  py-2'>RX Prescription
+          <p className='text-[16px] text-[#767a79] font-popping hover:text-[#064532] py-2'>RX Prescription
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping '>Scholarship Program
+          <p className='text-[16px] text-[#767a79] font-popping hover:text-[#064532]'>Scholarship Program
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping py-2'>Brand Directory
+          <p className='text-[16px] text-[#767a79] font-popping hover:text-[#064532] py-2'>Brand Directory
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping '>POrder Form
+          <p className='text-[16px] text-[#767a79] font-popping hover:text-[#064532]'>POrder Form
 </p>
-          <p className='text-[16px] text-[#767a79] font-popping py-2'>CBlog
+          <p className='text-[16px] text-[#767a79] font-popping py-2 hover:text-[#064532]'>CBlog
 </p>
         </div>
         <div className="">
         <h3 className='text-[#064532] text-[18px]  font-semibold py-4 font-popping'>Email Us</h3>
-        <p className='text-[16px] text-[#767a79] font-popping py-2'>Contact us for early booking
+        <p className='text-[16px] text-[#767a79] font-popping py-2 hover:text-[#064532]'>Contact us for early booking
           </p>
           <div className="flex  items-center">
             <input placeholder='your email address' className='placeholder:text-[#767a79] outline-none px-4  border-[1px] border-[#e6e6e] py-4 bg-[#f0f0f0]' type="text" name="" id="" />

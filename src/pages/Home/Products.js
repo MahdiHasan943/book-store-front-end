@@ -50,10 +50,14 @@ const Products = () => {
               slidesPerView: 2,
               spaceBetween: 30,
             },
-            1024: {
-              slidesPerView: 4,
+            1023: {
+              slidesPerView: 3,
               spaceBetween: 30,
-            },
+          },
+          1300: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
           }}
           slidesPerView={1}
           spaceBetween={30}
@@ -64,13 +68,13 @@ const Products = () => {
             clickable: true,
           }}
           modules={[Navigation]}
-          className="    w-full  mx-auto"
+          className="    w-full  h-[600px]  lg:h-[800px]   mx-auto"
         >
               {
                   filter?.map(order => (
-                    <SwiperSlide className='my-10 mx-4'>
-                    <div className="w-[430px]  py-6 px-5  h-[690px] slidecard">
-                              <div className="h-[600px]  group hover:scale-105 ease-linear duration-200  overflow-hidden relative bg-cover bg-center bg-no-repeat  w-full" style={{ backgroundImage: `url(${order?.imageURLs[0]})` }}>
+                    <SwiperSlide className='my-10 h-[500px]  lg:h-[690px]   sm:mx-4 '>
+                    <div className="w-[280px] mx-auto   lg:w-[370px] xl:w-[400px]  py-6 sm:px-5 lg:h-[690px] slidecard">
+                              <div className="h-[420px] md:h-[380px] xl:h-[580px]  group hover:scale-105 ease-linear duration-200  overflow-hidden relative bg-cover bg-center bg-no-repeat  w-full" style={{ backgroundImage: `url(${order?.imageURLs[0]})` }}>
                                   <div className="w-[35px] absolute top-[30px] right-[30px] bg-[white] h-[35px] flex justify-center items-center  border-[1px] p-2 border-[#e6e6e] rounded-full">
                                   <img className='w-[30px]  h-[30px]' src="/love-svgrepo-com.svg" alt="" />
 
@@ -89,8 +93,8 @@ const Products = () => {
                               </div>
                               <div className="mt-4">
                                   <img className='mx-auto' src="/startCopy.png" alt="" />
-                                  <p className='text-center capitalize text-[#064532] font-semibold text-[18px] py-4  font-popping'>{order.name}</p>
-                                  <p className='text-center capitalize text-[red] font-semibold text-[18px]   font-popping'><span className='text-[#111]'>Price : </span>{order.price}$</p>
+                                  <p className='text-center capitalize text-[#064532] font-semibold text-[18px] py-4  font-popping'>{order?.name}</p>
+                                  <p className='text-center capitalize text-[red] font-semibold text-[18px]   font-popping'><span className='text-[#111]'>Price : </span>{order?.price}$</p>
 
                               </div>
                     </div>

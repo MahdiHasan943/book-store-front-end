@@ -15,6 +15,9 @@ const Home = () => {
     <div>
 
       <Bannar></Bannar>
+
+
+      <div className="px-4 sm:px-16 mx-auto">
       <SubBannar></SubBannar>
       <ProductCategory></ProductCategory>
 
@@ -24,6 +27,7 @@ const Home = () => {
 
       <Advertise></Advertise>
 
+  </div>
 
     </div>
   )

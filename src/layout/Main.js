@@ -11,7 +11,7 @@ const Main = () => {
       <div>
           
       <Header></Header>
-      <div className="px-4 sm:px-16 mx-auto ">
+      <div className=" mx-auto ">
       <Outlet></Outlet>
       </div>
           

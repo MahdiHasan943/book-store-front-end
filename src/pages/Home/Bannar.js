@@ -7,9 +7,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import './Bannar.css'
+import {motion} from "framer-motion";
 
 
 import { Navigation, Pagination } from 'swiper';
+import { heroText } from '../../Context/motion';
 
 const Bannar = () => {
   const bannars = [
@@ -47,7 +49,7 @@ const Bannar = () => {
       <Swiper
          
           slidesPerView={1}
-          spaceBetween={30}
+        
           pagination={{
             clickable: true,
           }}
@@ -64,36 +66,36 @@ const Bannar = () => {
           #064532 */}
           {
             bannars.map(b => (
-              <SwiperSlide className='my-10 h-[550px] sm:h-[600px] w-full  sm:mx-4 '>
+              <SwiperSlide className='my-10 h-[550px] sm:h-[600px] w-full   '>
               <div className=" py-6 sm:px-5 h-[550px] sm:h-[600px] w-full slidecard">
                         <div className="h-[550px] sm:h-[600px] ease-linear duration-200  overflow-hidden relative bg-cover bg-center bg-no-repeat  w-full" style={{ backgroundImage: `url(${b.img})` }}>
                            
                         <div className=" absolute top-0 left-0 px-6 sm:px-24 w-full h-full flex flex-col justify-center   ">
 
                       {
-                        b.id ===1&&<div className=" my-auto">
+                        b.id ===1&&<motion.div variants={heroText} initial="hidden" whileInView="show" className=" my-auto">
                         <h1 className=" text-[#064532] font-popping text-[40px]  sm:text-[60px]  font-bold">Biggest <span className='text-[#f1592b]'>bookstore</span> </h1>
                         <h2 className='  text-[#064532] font-popping text-[40px] mt-[-4px] sm:text-[60px]  font-bold'>in Europe</h2>
   <p className="mb-5 text-[15px] font-popping  text-gray-400">$15,343,695.75 raised for local bookstores</p>
       <button className='text-white font-semibold text-[14px] font-lato py-3 px-6 bg-[#f1592b]'>Meet OUR BESTSELLER</button>
-      </div>
+      </motion.div>
                       }
                        {
-                        b.id ===2&&<div className=" my-auto">
+                        b.id ===2&&<motion.div variants={heroText} initial="hidden" whileInView="show"  className=" my-auto">
                         <h1 className=" text-[#064532] font-popping text-[40px]  sm:text-[60px]  font-bold">Bestselling <span className='text-[#f1592b]'>Fiction</span> </h1>
-                        <h2 className='  text-[#064532] font-popping text-[40px] mt-[-4px] sm:text-[60px]  font-bold'>Book</h2>
+                        <h2 className='  text-[#064532] font-popping text-[40px] mt-[-10px] sm:text-[60px]  font-bold'>Book</h2>
   <p className="mb-5 text-[15px] font-popping  text-gray-400">$15,343,695.75 raised for local bookstores</p>
       <button className='text-white font-semibold text-[14px] font-lato py-3 px-6 bg-[#f1592b]'>Meet OUR BESTSELLER</button>
-      </div>
+      </motion.div>
                        }
 
 {
-                        b.id ===3&&<div className=" my-auto">
+                        b.id ===3&&<motion.div variants={heroText} initial="hidden" whileInView="show"  className=" my-auto">
                         <h1 className=" text-[#064532] font-popping text-[40px]  sm:text-[60px]  font-bold">Biggest <span className='text-[#f1592b]'>bookstore</span> </h1>
                         <h2 className='  text-[#064532] font-popping text-[40px] mt-[-4px] sm:text-[60px]  font-bold'>in Europe</h2>
   <p className="mb-5 text-[15px] font-popping  text-gray-400">$15,343,695.75 raised for local bookstores</p>
       <button className='text-white font-semibold text-[14px] font-lato py-3 px-6 bg-[#f1592b]'>Meet OUR BESTSELLER</button>
-      </div>
+      </motion.div>
                        }
 
 

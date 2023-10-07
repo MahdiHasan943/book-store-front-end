@@ -69,13 +69,17 @@ const BookingModa = ({ modalData, setModalData }) => {
 
 
   return (
-        <>
+      <>
+         
+
            
-           <input type="checkbox" id="booking-modal" className="modal-toggle" />
-            <div className="modal">
-        <div className="modal-box relative">
-           <img className='h-[200px] w-full' src={imageURLs[0]} alt="" />
-                    <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+            <input type="checkbox" id="booking-modal" className="modal-toggle" />
+            <div className="modal  sm:h-[700px] py-10 w-full">
+              <div className="grid grid-cols-1 snap-y gap-4 sm:gap-0 sm:grid-cols-2 relative  shadow-ButtonShadow w-[90%] lg:w-[1000px] mx-auto h-full">
+              <label htmlFor="booking-modal" className=" text-[black] btn-circle absolute right-4 top-4 text-[30px]">✕</label>
+                  <div className="overflow-hidden"><img className='w-[280px] mx-auto sm:w-full h-[540px]  sm:h-full' src={imageURLs[0]} alt="" /></div>
+                  <div className="overflow-hidden w-[280px] mx-auto sm:w-full h-[540px]  sm:h-full  bg-white"></div>
+           {/* <img className='h-[200px] w-full' src={imageURLs[0]} alt="" />
                     
                   <h3 className="text-lg font-bold">{name}</h3>
                   <div className='flex my-2 font-semibold justify-between'>
@@ -96,9 +100,9 @@ const BookingModa = ({ modalData, setModalData }) => {
 
                         <br />
                         <input className='btn btn-accent w-full' type="submit" value="Submit" />
-                  </form>
+                  </form> */}
                 </div>
-            </div>
+            </div> 
         </>
     )
 }

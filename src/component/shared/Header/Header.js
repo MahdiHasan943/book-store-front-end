@@ -22,8 +22,8 @@ const Header = () => {
   
   const menu = <React.Fragment>
     <div className="flex items-center">
-      <img src="/book.png" alt="" />
-      <p className='text-[40px] text-[#064532] font-Arimo font-bold'>BookStore</p>
+    <Link to={'/'}><img src="/book.png" alt="" /></Link>
+      <Link to={'/'}><p className='text-[40px] text-[#064532] font-Arimo font-bold'>BookStore</p></Link>
     </div>
     <li>
       
@@ -72,8 +72,15 @@ const Header = () => {
               Dashboard
             </NavLink>
           </li>
+          {
+                 location.pathname === "/dashboard" || location.pathname === "/dashboard/myorders" || location.pathname ==='/dashboard/addproducts' || location.pathname === '/dashboard/mybuyers'||location.pathname==='/dashboard/myproducts' ||location.pathname==='/dashboard/allseller'||location.pathname=== '/dashboard/allbuyer'||location.pathname==='/dashboard/payment/:id'?
+             "":    <div className="hidden w-[600px] sm:block">
+             <input  type="text" placeholder="Search book" className="input search-book  border-2 border-white bg-[#efefef]  w-full max-w-xs" />
+             </div>
+                }
       </>               :
-                  <>                     
+        <>   
+          
 </>
 
 }
@@ -83,8 +90,8 @@ const Header = () => {
     {
               user?.uid ?
         <>          
-<div className='text-white font-semibold text-[14px] font-lato py-1 px-2 mx-2 bg-[#f1592b]' onClick={handleLogOut}><Button3>Log Out</Button3></div>
-<img className='w-[50px] h-[50px] rounded-full' title={user?.displayName}  src={user?.photoURL ? user.photoURL:<FaCentos></FaCentos>} alt="" />
+<div className='text-white font-semibold text-[14px] font-lato  mx-2 bg-[#f1592b]' onClick={handleLogOut}><Button3>Log Out</Button3></div>
+<img className='w-[30px] h-[30px] rounded-full' title={user?.displayName}  src={user?.photoURL ? user.photoURL:<FaCentos></FaCentos>} alt="" />
         
       </>                 :
                   <>
@@ -104,13 +111,7 @@ const Header = () => {
         </div>
 
 
-        <div className="flex  justify-center">
-          <div className="btn btn-ghost normal-case text-xl ">
-          
-          
-          </div>
-        </div>
-
+      
 
         <div className="flex justify-center">
           {login}
@@ -126,12 +127,19 @@ const Header = () => {
          
             <div className='lg:hidden w-full flex justify-between items-center'>
             <div className="flex items-center">
-      <img src="/book.png" alt="" />
-      <p className='text-[40px] text-[#064532] font-Arimo font-bold'>BookStore</p>
+            <Link to={'/'}><img src="/book.png" alt="" /></Link>
+                <Link to={'/'}>       <p className='text-[40px] text-[#064532] font-Arimo font-bold'>BookStore</p>
+</Link>
               </div>
-              <div className="hidden sm:block">
-            <input  type="text" placeholder="Search book" className="input search-book  border-2 border-white bg-[#efefef]  w-full max-w-xs" />
-            </div>
+              {
+                 location.pathname === "/dashboard" || location.pathname === "/dashboard/myorders" || location.pathname ==='/dashboard/addproducts' || location.pathname === '/dashboard/mybuyers'||location.pathname==='/dashboard/myproducts' ||location.pathname==='/dashboard/allseller'||location.pathname=== '/dashboard/allbuyer'||location.pathname==='/dashboard/payment/:id'?
+             "":    <div className="hidden sm:block">
+             <input  type="text" placeholder="Search book" className="input search-book  border-2 border-white bg-[#efefef]  w-full max-w-xs" />
+             </div>
+                }
+              {
+                 location.pathname === "/dashboard" || location.pathname === "/dashboard/myorders" || location.pathname ==='/dashboard/addproducts' || location.pathname === '/dashboard/mybuyers'||location.pathname==='/dashboard/myproducts' ||location.pathname==='/dashboard/allseller'||location.pathname=== '/dashboard/allbuyer'||location.pathname==='/dashboard/payment/:id'?
+          "":
             <div
               aria-label='Open Menu'
               title='Open Menu'
@@ -152,27 +160,14 @@ const Header = () => {
                   d='M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z'
                 />
               </svg>
-            </div>
+            </div>}
             {isMenuOpen && (
-              <div className='absolute  top-0 left-0 w-full z-40'>
-                <div className='p-5 bg-[#1f5f78] border rounded shadow-sm'>
+              <div className='absolute  top-0 left-0 w-full h-[80vh] z-40'>
+                <div className='p-5 bg-[#f1592b] border rounded h-full shadow-sm'>
                   <div className='flex items-center justify-between mb-4'>
                       <div>
                         <div className="   text center ">
-           {/* <Link
-            to='/'
-            aria-label='proReader'
-            title='proReader'
-            className='inline-flex items-center'
-          >
-            <FaBookOpen className='text-[#ff4157] font-bold text-2xl'></FaBookOpen>
-           
-
-            <p className='ml-2  text-xl text-white text-center font-bold tracking-wide #302e2c text-shadow-lg'>
-            Book Store
-
-            </p>
-          </Link> */}
+         
                         </div>
         
                       
@@ -222,8 +217,8 @@ const Header = () => {
             {
 
               location.pathname === "/dashboard" || location.pathname === "/dashboard/myorders" || location.pathname ==='/dashboard/addproducts' || location.pathname === '/dashboard/mybuyers'||location.pathname==='/dashboard/myproducts' ||location.pathname==='/dashboard/allseller'||location.pathname=== '/dashboard/allbuyer'||location.pathname==='/dashboard/payment/:id'?
-                <label htmlFor="my-drawer-2" tabIndex={1} className="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 text-white w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                <label htmlFor="my-drawer-2" tabIndex={1} className="lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 text-[#f1592b] w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </label>:''
 
             }

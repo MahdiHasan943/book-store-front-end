@@ -85,10 +85,17 @@ const Products = () => {
                                   <img className='w-[35px] absolute top-[30px] left-[30px] bg-[white] h-[35px] flex justify-center items-center  border-[1px] p-2 border-[#e6e6e] rounded-full' src="/hot.png" alt="" />
                               
                                   <div className="flex absolute left-0 bottom-[-100px] group-hover:bottom-0 ease-in-out duration-200 delay-200 w-full ">
-                                      <div className="bg-[black] w-full flex justify-center py-4 hover:bg-[#064532]"><Link to={`/books/${order?._id}`}>  <img className='w-[50px] h-[30px]' src="/arrow-sm-right-svgrepo-com.svg" alt="" /></Link></div>
-                                      <div className="bg-[black] py-4 flex justify-center w-full hover:bg-[#064532]">
+                                      <div className="bg-[black] w-full  flex justify-center py-4 hover:bg-[#064532]"><Link to={`/books/${order?._id}`}>  <img className='w-[50px] h-[30px]' src="/arrow-sm-right-svgrepo-com.svg" alt="" /></Link></div>
+                                      <div className="hidden  bg-[black] py-4 sm:flex justify-center w-full hover:bg-[#064532]">
                                           
-                                      <img className='w-[50px] h-[30px]' src="/eye-svgrepo-com.svg" alt="" />
+                              <label
+              htmlFor="booking-modal"
+              onClick={() => setModalData(order)}
+
+                        className=""
+                    >                              <img onClick={''} className='eye w-[50px] h-[30px]' src="/eye-svgrepo-com.svg" alt="" />
+                    </label>
+    
                                       </div>
 
                                 </div>
@@ -102,6 +109,7 @@ const Products = () => {
                               </div>
                     </div>
                     </SwiperSlide>
+
                     </>
                       
                   ))

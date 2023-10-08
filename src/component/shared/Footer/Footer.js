@@ -81,12 +81,12 @@ const Footer = () => {
          </div>
       <div className="px-4 sm:px-16 bg-[#fafafa]  py-6 shadow-xl text-center lg:text-start lg:flex justify-between">
         <div className="justify-center lg:justify-start flex py-4 lg:py-0 gap-4">
-          <p className='text-[#767a79] font-popping text-[18px] '>Terms of Use</p>
-          <p  className='text-[#767a79] font-popping text-[18px] '>Copyright & Trademark
+          <p className='text-[#767a79] font-popping text-[14px] '>Terms of Use</p>
+          <p  className='text-[#767a79] font-popping text-[14px] '>Copyright & Trademark
 </p>
-          <p  className='text-[#767a79] font-popping text-[18px] '>Terms of Use</p>
+          <p  className='text-[#767a79] font-popping text-[14px] '>Terms of Use</p>
         </div>
-        <p  className='text-[#767a79] font-popping text-[18px] '>© 2021 Book Store. All Rights Reserved</p>
+        <p  className='text-[#767a79] font-popping text-[14px] '>© 2021 Book Store. All Rights Reserved</p>
       </div>
      </div>
   )

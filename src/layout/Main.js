@@ -5,6 +5,8 @@ import Headere from '../component/shared/Header/Header'
 
 import Footer from '../component/shared/Footer/Footer'
 import { Outlet } from 'react-router-dom'
+import GoToTop from '../component/shared/goto-top/GotoTop'
+import TopBtn from '../component/shared/goto-top/TopBtn'
 
 const Main = () => {
   return (
@@ -15,8 +17,10 @@ const Main = () => {
       <Outlet></Outlet>
       </div>
           
-          <Footer></Footer>
+      <Footer></Footer>
 
+      <GoToTop/>
+      <TopBtn/>
     </div>
   )
 }

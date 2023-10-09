@@ -71,7 +71,10 @@ const Social = () => {
 
   return (
       <div className='text-center flex justify-center  px-4'>
-          <button onClick={handleGoogle} className='btn  btn-outline-none rounded-full bg-[white] text-[blue] text-2xl'><BsGoogle></BsGoogle></button>
+          <button onClick={handleGoogle} className=' rounded-full text-2xl'>
+              
+              <img src="/googleIcon.png" alt="" />
+          </button>
           {/* <button onClick={handleGithub} className='btn border-[tomato] text-[tomato] bg-[skyblue]'>GitHub</button> */}
         <Toaster></Toaster>
     </div>

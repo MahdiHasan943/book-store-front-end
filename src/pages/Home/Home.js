@@ -12,6 +12,7 @@ const Home = () => {
 
   useTitle(' Home page')
   return (
+    <>
     <div>
 
       <Bannar></Bannar>
@@ -30,6 +31,7 @@ const Home = () => {
   </div>
 
     </div>
+</>
   )
 }
 

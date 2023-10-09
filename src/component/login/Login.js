@@ -84,10 +84,10 @@ const Login = () => {
 
 
   return (
-    <div className="hero " style={{ backgroundImage: `url("https://th.bing.com/th/id/R.59dec8255f67a2fef5ebfe165382d047?rik=CWKL%2b5eAQIk%2b%2bw&pid=ImgRaw&r=0")` }}>
+    <div className="hero " style={{ backgroundImage: `url("https://th.bing.com/th/id/OIP.l7UtqpAoSasZ9777hHlp6QHaE8?pid=ImgDet&rs=1")` }}>
        <div className='my-8 hero-overlay bg-opacity-60 flex justify-center items-center'>
-    <div className='w-full sm:w-96 p-7 border border-white rounded-[35px]'>
-        <h2 className='text-3xl text-center font-bold  text-white '>Login</h2>
+    <div className='w-full sm:w-96 p-7 border border-[#f1592b] rounded-[35px]'>
+        <h2 className='text-3xl text-center font-bold  text-[#f1592b] '>Login</h2>
         <form onSubmit={handleSubmit(handleLogin)}>
             <div className="form-control w-full ">
                 <label className="label"> <span className="label-text text-white">Email</span></label>
@@ -109,12 +109,12 @@ const Login = () => {
                 <label className="label"> <span className="label-text text-white">Forget Password?</span></label>
                 {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
             </div>
-           <div className="flex justify-center items-center w-[100%] text-center"> <Button><span className='text-center w-full text-white'>Login</span></Button></div>
+           <div className="flex justify-center items-center w-[100%] text-center"> <button className='text-white font-semibold text-[14px] font-lato py-2 px-10 bg-[#f1592b]'>Login</button></div>
             <div className='my-6'>
                 {loginError && <p className='text-red-600'>{loginError}</p>}
             </div>
         </form>
-        <p className=' text-white'>New to Bookstore Portal <Link className='text-[#3fb5b3] font-bold' to="/register">Create new Account</Link></p>
+        <p className=' text-white font-popping'>New to Bookstore Portal <Link className='text-[#f1592b] font-semibold' to="/register">Create new Account</Link></p>
                   <div className="divider">OR</div>
                   <Social></Social>
     </div>

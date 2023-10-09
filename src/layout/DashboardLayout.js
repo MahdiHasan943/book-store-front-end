@@ -8,6 +8,8 @@ import useBuyer from '../Router/useBuyer'
 import useSeller from '../Router/useSeller'
 import Products from '../pages/Home/Products'
 import ProductCategory from '../pages/Home/ProductCategory'
+import GoToTop from '../component/shared/goto-top/GotoTop'
+import TopBtn from '../component/shared/goto-top/TopBtn'
 
 
 const DashboardLayout = () => {
@@ -93,8 +95,10 @@ const DashboardLayout = () => {
       
     </div>
 
-
+    <GoToTop/>
+      <TopBtn/>
     </div>
+    
   )
 }
 

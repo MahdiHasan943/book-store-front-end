@@ -27,6 +27,7 @@ import QuiezFour from '../pages/Blog/QuiezFour';
 import Payment from '../pages/Home/payment/Payment';
 import AllCatergory from '../pages/Home/AllCatergory';
 import ProductsDetails from '../pages/Home/ProductsDetails';
+import Similar from '../pages/Home/Similar';
 
 
 
@@ -90,7 +91,15 @@ const router = createBrowserRouter([
                   loader: ({params})=> fetch(`http://localhost:5000/api/v1/stock/${params?.id}`)
               }
 ,
-            { path: '/blog',
+{
+
+    path: '/similar/:id',
+      element: <Similar/> ,
+      loader: ({params})=> fetch(`http://localhost:5000/api/v1/stock/${params?.id}`)
+  }
+,
+            {
+                path: '/blog',
             element:<Blog></Blog>
             },
             {

@@ -116,8 +116,8 @@ const navigate =useNavigate()
     <div className="hero " style={{ backgroundImage: `url("https://th.bing.com/th/id/OIP.l7UtqpAoSasZ9777hHlp6QHaE8?pid=ImgDet&rs=1)` }} >
 
     <div className='flex justify-center py-12 hero-overlay bg-opacity-60  items-center'>
-    <div className='w-full sm:w-96 border border-white rounded-[35px] p-7'>
-        <h2 className='text-3xl text-center font-bold  text-white  '>Sign Up</h2>
+    <div className='w-full sm:w-96 border border-[#f1592b] rounded-[35px] p-7'>
+        <h2 className='text-3xl text-center font-bold  text-[#f1592b]  '>Sign Up</h2>
         <form onSubmit={handleSubmit(handleSignUp)}>
             <div className="form-control w-full">
                 <label className="label"> <span className="label-text  text-white">Name</span></label>
@@ -184,11 +184,11 @@ const navigate =useNavigate()
             </div>
 
             
-            <div className="flex justify-center items-center w-[100%] text-center"> <Button>Sign Up</Button></div>  
+            <div className="flex justify-center items-center w-[100%] py-4 text-center">  <button className='text-white font-semibold text-[14px] font-lato py-2 px-10 bg-[#f1592b]'>Sign Up</button></div>  
           </form>
           <div className="my-4">{signUpError && <p className='text-yellow-600'>{signUpError}</p>}</div>
 
-        <p className=' text-white'>Already have an account <Link className='text-secondary' to="/login">Please Login</Link></p>
+        <p className=' text-white font-popping'>Already have an account <Link className='text-[#f1592b] font-semibold' to="/login">Please Login</Link></p>
           <div className="divider">OR</div>
           
 

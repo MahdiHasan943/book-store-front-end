@@ -90,13 +90,13 @@ const Header = () => {
     {
               user?.uid ?
         <>          
-<div className='text-white font-semibold text-[14px] font-lato  mx-2 bg-[#f1592b]' onClick={handleLogOut}><Button3>Log Out</Button3></div>
+<div className='text-white font-semibold text-[14px] font-lato  mx-2 bg-[#f1592b]' onClick={handleLogOut}><button className='text-white font-semibold text-[14px] font-lato py-2 px-6 bg-[#f1592b]'>Log Out</button></div>
 <img className='w-[30px] h-[30px] rounded-full' title={user?.displayName}  src={user?.photoURL ? user.photoURL:<FaCentos></FaCentos>} alt="" />
         
       </>                 :
                   <>
           <div className="'text-white font-semibold text-[14px] font-lato py-1 px-2 mx-2 bg-[#f1592b]">
-          <Link to='/login'><Button3>Log In</Button3>
+          <Link to='/login'><button className='text-white font-semibold text-[14px] font-lato py-2 px-6 bg-[#f1592b]'>Sign In</button>
 </Link>                     
 </div></> 
 }

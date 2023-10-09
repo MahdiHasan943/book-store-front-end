@@ -22,12 +22,12 @@ console.log(services);
       <div className="max-w-screen-xl py-8 mx-auto">
           <h1 className='d text-4xl font-semibold my-6 text-center '>Choose  Your Books Category</h1>
           <div className="text-center flex justify-center">
-              <div className=' h-[2px] w-[200px] py-0 bg-[#ff4157]'></div>
+              <div className=' h-[2px] w-[200px] py-0 bg-[#f1592b]'></div>
           </div>
           <div className="text-center my-2 flex justify-center">
-          <div className=' h-[1px] w-[20px] mx-2 py-0 bg-[#ff4157]'></div>
-              <div className=' h-[1px] w-[100px] py-0 bg-[#ff4157]'></div>
-              <div className=' h-[1px] w-[20px] mx-2 py-0 bg-[#ff4157]'></div>
+          <div className=' h-[1px] w-[20px] mx-2 py-0 bg-[#f1592b]'></div>
+              <div className=' h-[1px] w-[100px] py-0 bg-[#f1592b]'></div>
+              <div className=' h-[1px] w-[20px] mx-2 py-0 bg-[#f1592b]'></div>
           </div>
             <div className='grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-4'>{
            filter.map(service=><CategoryCard key={service._id} service={service}></CategoryCard>)          
@@ -36,7 +36,11 @@ console.log(services);
           </div>
           <div className="mx-auto text-center">
           
-           <Link to={'/allCategory'}><Buttontwo>See All</Buttontwo> </Link> 
+              <div className="py-8">
+                  
+           <Link to={'/allCategory'}>      <button className='text-white font-semibold text-[14px] font-lato py-3 px-6 bg-[#f1592b]'>See All</button>
+</Link> 
+              </div>
           </div>
           
       </div>

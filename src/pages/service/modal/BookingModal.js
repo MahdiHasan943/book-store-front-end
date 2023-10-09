@@ -74,8 +74,9 @@ console.log(modalData);
 
            
             <input type="checkbox" id="booking-modal" className="modal-toggle" />
-            <div className="modal  sm:h-[700px] py-10 w-full">
-              <div className="grid grid-cols-1 snap-y gap-4 sm:gap-0 sm:grid-cols-2 relative  shadow-ButtonShadow w-[90%] lg:w-[800px] mx-auto h-full">
+            <div className="modal h-[100vh] py-10 w-full">
+              <div className="h-[700px] w-full">
+                   <div className="grid grid-cols-1 snap-y gap-4 sm:gap-0 sm:grid-cols-2 relative  shadow-ButtonShadow w-[90%] lg:w-[800px] mx-auto h-full">
               <label htmlFor="booking-modal" className=" text-[black] btn-circle absolute right-4 top-4 text-[30px]">✕</label>
                   <div className="overflow-hidden"><img className='w-[280px] mx-auto sm:w-full h-[540px]  sm:h-full' src={imageURLs[0]} alt="" /></div>
                   <div className="overflow-hidden w-[280px] mx-auto sm:w-full h-[540px] flex justify-center items-center py-10 px-2 sm:px-4 sm:h-full  bg-white">
@@ -120,6 +121,7 @@ console.log(modalData);
                         <input className='btn btn-accent w-full' type="submit" value="Submit" />
                   </form> */}
                 </div>
+             </div>
             </div> 
         </>
     )

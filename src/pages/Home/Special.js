@@ -11,12 +11,12 @@ const Special = () => {
           
           <h1 className='text-4xl my-3 font-semibold uppercase text-center'>Special Offer </h1>
           <div className="text-center flex justify-center">
-              <div className=' h-[2px] w-[200px] py-0 bg-[#ff4157]'></div>
+              <div className=' h-[2px] w-[200px] py-0 bg-[#f1592b]'></div>
           </div>
           <div className="text-center my-2 flex justify-center">
-          <div className=' h-[1px] w-[20px] mx-2 py-0 bg-[#ff4157]'></div>
-              <div className=' h-[1px] w-[100px] py-0 bg-[#ff4157]'></div>
-              <div className=' h-[1px] w-[20px] mx-2 py-0 bg-[#ff4157]'></div>
+          <div className=' h-[1px] w-[20px] mx-2 py-0 bg-[#f1592b]'></div>
+              <div className=' h-[1px] w-[100px] py-0 bg-[#f1592b]'></div>
+              <div className=' h-[1px] w-[20px] mx-2 py-0 bg-[#f1592b]'></div>
           </div>
           <p className='text-1xl my-6 font-semibold text-[12px]  text-[gray] text-center'>Choose any three items from this list of paperback books and CD’s and receive all three at <br />  the discounted price of $25 including shipping (US only).  Or choose one hardcover <br /> book and two of any of the others for $30 including shipping. <br /></p>
           

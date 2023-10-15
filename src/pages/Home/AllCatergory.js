@@ -4,7 +4,7 @@ import CategoryCard from './CategoryCard';
 const AllCatergory = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-      fetch('http://localhost:5000/api/v1/category')
+      fetch('https://server-side-kohl.vercel.app/api/v1/category')
           .then(res => res.json())
         .then(data=>setServices(data?.data))
   },[])

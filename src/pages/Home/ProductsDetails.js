@@ -20,13 +20,13 @@ const ProductsDetails = () => {
 
   const [pDetails, setPDetails] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/api/v1/stock/${id}`)
+    fetch(`https://server-side-kohl.vercel.app/api/v1/stock/${id}`)
       .then(res => res.json())
     .then(data=>setPDetails(data.data))
   },[])
  
   useEffect(() => {
-    fetch(`http://localhost:5000/api/v1/stock`)
+    fetch(`https://server-side-kohl.vercel.app/api/v1/stock`)
       .then(res => res.json())
     .then(data=>setSp(data.data))
   }, [])

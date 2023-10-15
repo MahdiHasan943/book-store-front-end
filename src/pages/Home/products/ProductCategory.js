@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Loading from '../../component/shared/loading/Loading';
 import {useQuery}  from '@tanstack/react-query'
 import CategoryCard from './CategoryCard';
-
-import Buttontwo from '../../component/shared/Button/Buttontwo'
 import { Link } from 'react-router-dom';
 
 const ProductCategory = () => {

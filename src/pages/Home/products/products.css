@@ -3,7 +3,7 @@
 }
   
 .swiper-button-next {
-    background-image: url(../../../public/right-arrow-svgrepo-com.svg)!important;
+    background-image: url(../../../../public/right-arrow-svgrepo-com.svg)!important;
     background-repeat: no-repeat;
     background-size: 100% 50%;
     border: 1px solid black;
@@ -14,7 +14,7 @@
     transition: opacity 0.6s ease-in-out;
   }
   .swiper-button-prev {
-    background-image: url(../../../public/right-arrow-svgrepo-com2.svg)!important;
+    background-image: url(../../../../public/right-arrow-svgrepo-com2.svg)!important;
     background-size: 100% 50%;
     border: 1px solid black;
     padding: 2px 22px;

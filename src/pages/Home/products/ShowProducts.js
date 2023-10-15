@@ -1,7 +1,5 @@
-import Button3 from '../../component/shared/Button/Button3';
 
 import React, { useRef, useState, useEffect } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";

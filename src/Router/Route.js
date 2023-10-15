@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import AdminRoute from "./AdminRoute";
-
 import Login from "../component/login/Login";
 import Register from "../component/login/Register";
 import Error from "../component/shared/error/Error";
@@ -12,7 +11,7 @@ import MyBuyer from "../pages/dashboard/MyBuyer";
 import Myorders from "../pages/dashboard/Myorders";
 import MyProducts from "../pages/dashboard/MyProducts";
 import Home from "../pages/Home/Home";
-import Products from "../pages/Home/Products";
+import Products from "../pages/Home/products/Products";
 import Service from "../pages/service/Service";
 import Private from "./Private";
 import Allseller from "../pages/dashboard/adimin/Allseller";
@@ -20,9 +19,10 @@ import AllBuyer from "../pages/dashboard/adimin/AllBuyer";
 import BuyerRoute from "./BuyerRoute";
 import SellerRout from "./SellerRout";
 import Payment from "../pages/Home/payment/Payment";
-import AllCatergory from "../pages/Home/AllCatergory";
-import ProductsDetails from "../pages/Home/ProductsDetails";
-import Similar from "../pages/Home/Similar";
+import AllCatergory from "../pages/Home/products/AllCatergory";
+import ProductsDetails from "../pages/Home/products/ProductsDetails";
+import Similar from "../pages/Home/products/Similar";
+import AddToCart from "../pages/addTocart/AddToCart";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +51,7 @@ const router = createBrowserRouter([
       },
 
       { path: "/Service", element: <Service></Service> },
+      { path: "/AddToCart", element: <AddToCart/> },
 
       {
         path: "/service/:id",

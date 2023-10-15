@@ -1,7 +1,7 @@
 import React, { useRef, useState ,useEffect} from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import BookingModa from '../service/modal/BookingModal';
+import BookingModa from '../../service/modal/BookingModal';
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,7 +12,7 @@ import"./products.css"
 import { Navigation, Pagination } from 'swiper';
 import { Link, useParams } from 'react-router-dom'
 
-const ProductsDetails = () => {
+const Similar = () => {
   const { id } = useParams()
   const [modalData, setModalData]=useState(null);
 
@@ -118,7 +118,7 @@ const ProductsDetails = () => {
                                   <img className='w-[35px] absolute top-[30px] left-[30px] bg-[white] h-[35px] flex justify-center items-center  border-[1px] p-2 border-[#e6e6e] rounded-full' src="/hot.png" alt="" />
                               
                                   <div className="flex absolute left-0 bottom-[-100px] group-hover:bottom-0 ease-in-out duration-200 delay-200 w-full ">
-                                      <div className="bg-[black] w-full  flex justify-center py-4 hover:bg-[#064532]"><Link to={`/similar/${order?._id}`}>  <img className='w-[50px] h-[30px]' src="/arrow-sm-right-svgrepo-com.svg" alt="" /></Link></div>
+                                      <div className="bg-[black] w-full  flex justify-center py-4 hover:bg-[#064532]"><Link to={`/books/${order?._id}`}>  <img className='w-[50px] h-[30px]' src="/arrow-sm-right-svgrepo-com.svg" alt="" /></Link></div>
                                       <div className="hidden  bg-[black] py-4 sm:flex justify-center w-full hover:bg-[#064532]">
                                           
                               <label
@@ -173,4 +173,4 @@ const ProductsDetails = () => {
   )
 }
 
-export default ProductsDetails
+export default Similar

@@ -1,12 +1,8 @@
 import React from 'react'
 import useTitle from '../../Router/hook/useTitle'
-import Advertise from './advertise/Advertise'
-import Allproducts from './allproducts/Allproducts'
 import Bannar from './Bannar'
-import ProductCategory from './ProductCategory'
-import Special from './Special'
-
-import SubBannar from './SubBannar'
+import ProductCategory from './products/ProductCategory'
+import Special from './special/Special'
 
 const Home = () => {
 
@@ -19,15 +15,11 @@ const Home = () => {
 
 
       <div className="px-4 sm:px-16 mx-auto">
-      <SubBannar></SubBannar>
       <ProductCategory></ProductCategory>
 
 
 
       <Special></Special>
-
-      <Advertise></Advertise>
-
   </div>
 
     </div>

@@ -23,6 +23,7 @@ import AllCatergory from "../pages/Home/products/AllCatergory";
 import ProductsDetails from "../pages/Home/products/ProductsDetails";
 import Similar from "../pages/Home/products/Similar";
 import AddToCart from "../pages/addTocart/AddToCart";
+import Profile from "../pages/Profile/Profile";
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,11 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login></Login>,
       },
-
+      {
+        path: "/profile",
+        element:       <Private>
+        <Profile></Profile></Private>,
+      },
       {
         path: "/register",
         element: <Register></Register>,

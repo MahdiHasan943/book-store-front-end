@@ -6,15 +6,12 @@ margin-top: 10px;
     text-align: center;
     color: #ff4157;
     position: relative;
+    width: 280px;
+    height: 380px;
 }
 
 
-.img-area img{
 
-    width: 100%;
-    height: auto;
-
-}
 
 .img-text,
 .img-area:after{

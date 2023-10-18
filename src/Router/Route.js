@@ -24,6 +24,7 @@ import ProductsDetails from "../pages/Home/products/ProductsDetails";
 import Similar from "../pages/Home/products/Similar";
 import AddToCart from "../pages/addTocart/AddToCart";
 import Profile from "../pages/Profile/Profile";
+import OrderSummery from "../pages/OrderSummery/OrderSummery";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
         path: "/profile",
         element:       <Private>
         <Profile></Profile></Private>,
+      },
+      {
+        path: "/OrderSummery",
+        element:       <Private>
+        <OrderSummery/></Private>,
       },
       {
         path: "/register",

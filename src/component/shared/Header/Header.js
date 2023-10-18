@@ -12,15 +12,22 @@ const Header = () => {
   const location = useLocation();
   const [toggle, setToggle] = useState(false);
   const { user, logOut } = useContext(AuthContext);
+ 
   const { cart } = useContext(ProductsContext)
-  console.log(cart);
+  
+  console.log(cart, 'cart from header');
+  
+  // cart.map(item => {
+  //   console.log(item);
+  // });
   const handleLogOut = () => {
     logOut().then().catch();
   };
 
 
-
-
+  const cartDetails = Array.isArray(cart) ? cart.filter(item => item?.email === user?.email) : [];
+  // const cartDetails = 
+console.log(cartDetails?.length);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -150,7 +157,7 @@ const Header = () => {
 
         <div className="flex items-center justify-center">
           <Link to={'/AddToCart'}><div className="px-4  relative"><FaCartPlus className="text-[#f1592b] text-[25px]" />
- <div className="absolute left-0 top-[-10px] bg-[#f1592b] w-[22px] flex justify-center items-center h-[22px] rounded-full">            <p className=" text-[#fff]  rounded-full  font-popping text-[18px]">{cart}</p>
+ <div className="absolute left-0 top-[-10px] bg-[#f1592b] w-[22px] flex justify-center items-center h-[22px] rounded-full">            <p className=" text-[#fff]  rounded-full  font-popping text-[18px]">{cartDetails?.length||0}</p>
 </div>
           </div></Link>
           {login}</div>

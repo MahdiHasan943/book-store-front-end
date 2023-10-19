@@ -16,7 +16,6 @@ const Special = () => {
         })
   }, [])
   const filters = specials.filter(s=>s.special)
-    console.log(filters,'filters');
   return (
       <div className='py-8  shadow-summery mt-8 px-4'>
           

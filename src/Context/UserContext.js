@@ -13,7 +13,7 @@ const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
     const githubprovider = new GithubAuthProvider();
-console.log(user);
+// console.log(user);
 
     const createUser = (email, password) => {
         setLoading(true)

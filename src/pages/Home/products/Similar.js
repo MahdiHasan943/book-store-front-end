@@ -30,7 +30,6 @@ const Similar = () => {
       .then(res => res.json())
     .then(data=>setSp(data.data))
   }, [])
-  console.log(sP);
   const similar=sP.filter(sp=>sp?.category===pDetails?.category)
   // const { imageURLs,location,time,name,brand,price, years,seller,category} = pDetails;
   return (

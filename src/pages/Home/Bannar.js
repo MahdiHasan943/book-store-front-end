@@ -65,8 +65,8 @@ const Bannar = () => {
           {/* #f1592b
           #064532 */}
           {
-            bannars.map(b => (
-              <SwiperSlide className='my-10 h-[550px] sm:h-[600px] w-full   '>
+            bannars.map((b,index) => (
+              <SwiperSlide key={index} className='my-10 h-[550px] sm:h-[600px] w-full   '>
               <div className=" py-6 sm:px-5 h-[550px] sm:h-[600px] w-full slidecard">
                         <div className="h-[550px] sm:h-[600px] ease-linear duration-200  overflow-hidden relative bg-cover bg-center bg-no-repeat  w-full" style={{ backgroundImage: `url(${b.img})` }}>
                            

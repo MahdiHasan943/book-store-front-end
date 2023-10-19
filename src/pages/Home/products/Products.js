@@ -13,18 +13,14 @@ import { Navigation, Pagination } from 'swiper';
 import Loading from '../../../component/shared/loading/Loading';
 const Products = () => {
     const { id } = useParams()
-    console.log(id);
     const  data  = useLoaderData([]);
     // console.log(data._id);
       
     const [orders, setOrders] = useState([]);
     // console.log(orders);
     const [modalData, setModalData]=useState(null);
-    console.log(orders);
     const filter=orders.filter(f=>f?.category===id)
-    
-// console.log(orders);        
-      
+          
         useEffect(() => {
             fetch(`https://server-side-kohl.vercel.app/api/v1/stock`)
               

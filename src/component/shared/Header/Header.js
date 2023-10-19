@@ -2,33 +2,22 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaCentos } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa";
-import { FaBookOpen ,FaCartPlus} from "react-icons/fa";
+import { FaBookOpen, FaCartPlus } from "react-icons/fa";
 import { AuthContext } from "../../../Context/UserContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { ProductsContext } from "../../../Context/AddTocartContext";
-
 
 const Header = () => {
   const location = useLocation();
   const [toggle, setToggle] = useState(false);
   const { user, logOut } = useContext(AuthContext);
- 
-  const { cart } = useContext(ProductsContext)
-  
-  console.log(cart, 'cart from header');
-  
-  // cart.map(item => {
-  //   console.log(item);
-  // });
+  const { cart } = useContext(ProductsContext);
   const handleLogOut = () => {
     logOut().then().catch();
   };
-
-
-  const cartDetails = Array.isArray(cart) ? cart.filter(item => item?.email === user?.email) : [];
-  // const cartDetails = 
-console.log(cartDetails?.length);
-
+  const cartDetails = Array.isArray(cart)
+    ? cart.filter((item) => item?.email === user?.email)
+    : [];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menu = (
@@ -115,16 +104,15 @@ console.log(cartDetails?.length);
   const login = (
     <React.Fragment>
       {user?.uid ? (
-        <>  <img
-        onClick={() => setToggle(!toggle)}
-
-        className="w-[30px] h-[30px] rounded-full"
-        title={user?.displayName}
-        src={user?.photoURL ? user.photoURL : <FaCentos></FaCentos>}
-        alt=""
-      />
-          
-        
+        <>
+          {" "}
+          <img
+            onClick={() => setToggle(!toggle)}
+            className="w-[30px] h-[30px] rounded-full"
+            title={user?.displayName}
+            src={user?.photoURL ? user.photoURL : <FaCentos></FaCentos>}
+            alt=""
+          />
         </>
       ) : (
         <>
@@ -156,11 +144,19 @@ console.log(cartDetails?.length);
         </div>
 
         <div className="flex items-center justify-center">
-          <Link to={'/AddToCart'}><div className="px-4  relative"><FaCartPlus className="text-[#f1592b] text-[25px]" />
- <div className="absolute left-0 top-[-10px] bg-[#f1592b] w-[22px] flex justify-center items-center h-[22px] rounded-full">            <p className=" text-[#fff]  rounded-full  font-popping text-[18px]">{cartDetails?.length||0}</p>
-</div>
-          </div></Link>
-          {login}</div>
+          <Link to={"/AddToCart"}>
+            <div className="px-4  relative">
+              <FaCartPlus className="text-[#f1592b] text-[25px]" />
+              <div className="absolute left-0 top-[-10px] bg-[#f1592b] w-[22px] flex justify-center items-center h-[22px] rounded-full">
+                {" "}
+                <p className=" text-[#fff]  rounded-full  font-popping text-[18px]">
+                  {cartDetails?.length || 0}
+                </p>
+              </div>
+            </div>
+          </Link>
+          {login}
+        </div>
       </div>
 
       <div className="  py-2 mx-auto sm:px-16 px-4 ">
@@ -230,14 +226,14 @@ console.log(cartDetails?.length);
               )}
               {isMenuOpen && (
                 <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-                  className="absolute  top-0 left-0 w-full z-40">
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  className="absolute  top-0 left-0 w-full z-40"
+                >
                   <div className="p-5 relative bg-[#fafafa] border-[3px] border-[#f1592b] rounded h-full shadow-sm">
                     <div className="flex items-center justify-between ">
-                  
                       <div>
                         <button
                           aria-label="Close Menu"
@@ -245,7 +241,10 @@ console.log(cartDetails?.length);
                           className="p-2 absolute top-[3px] right-[8px]  "
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <svg className="w-5 text-[#f1592b]" viewBox="0 0 24 24">
+                          <svg
+                            className="w-5 text-[#f1592b]"
+                            viewBox="0 0 24 24"
+                          >
                             <path
                               fill="currentColor"
                               d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
@@ -293,42 +292,42 @@ console.log(cartDetails?.length);
           </div>
         </div>
 
-        <div className={`${
-          !toggle ? "hidden" : "block"
-        } py-6 px-6 gradient bg-[#fafafa] border-[1px] border-[#f1592b] absolute top-20 right-0 mx-4 my-2 w-[220px] z-10 rounded-xl`}>
-        
-        <img
-        onClick={() => setToggle(!toggle)}
-
-        className="w-[80px] mx-auto h-[80px] rounded-full"
-        title={user?.displayName}
-        src={user?.photoURL ? user.photoURL : <FaCentos></FaCentos>}
-        alt=""
+        <div
+          className={`${
+            !toggle ? "hidden" : "block"
+          } py-6 px-6 gradient bg-[#fafafa] border-[1px] border-[#f1592b] absolute top-20 right-0 mx-4 my-2 w-[220px] z-10 rounded-xl`}
+        >
+          <img
+            onClick={() => setToggle(!toggle)}
+            className="w-[80px] mx-auto h-[80px] rounded-full"
+            title={user?.displayName}
+            src={user?.photoURL ? user.photoURL : <FaCentos></FaCentos>}
+            alt=""
           />
           <div className="w-[80%] mx-auto h-[1px] bg-[#064532] my-4"></div>
           <NavLink
             to="/profile"
             onClick={() => setToggle(!toggle)}
-
-           className={({ isActive }) =>
-           isActive
-             ? "font-bold tracking-wide text-[#f1592b]  transition-colors duration-200 hover:text-deep-purple-accent-400"
-             : "font-medium tracking-wide text-gray-400  transition-colors duration-200 hover:text-deep-purple-accent-400"
-         }>
+            className={({ isActive }) =>
+              isActive
+                ? "font-bold tracking-wide text-[#f1592b]  transition-colors duration-200 hover:text-deep-purple-accent-400"
+                : "font-medium tracking-wide text-gray-400  transition-colors duration-200 hover:text-deep-purple-accent-400"
+            }
+          >
             Profile
           </NavLink>
-          
+
           <div
             className="py-4 rounded-full mx-auto"
             onClick={() => {
-              handleLogOut()
-              setToggle(!toggle)
+              handleLogOut();
+              setToggle(!toggle);
             }}
           >
             <button className="text-white font-semibold text-[14px] font-lato py-2 px-6 bg-[#f1592b]">
               Log Out
             </button>
-          </div> 
+          </div>
         </div>
       </div>
     </>

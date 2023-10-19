@@ -11,9 +11,7 @@ const ProductCategory = () => {
             .then(res => res.json())
           .then(data=>setServices(data.data))
     },[])
-console.log(services);
     const filter = services.slice(6);
-    console.log(filter);
   return (
     
       <div className="max-w-screen-xl py-8 mx-auto">

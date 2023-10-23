@@ -255,7 +255,7 @@ const AddToCart = () => {
                     </p>
                     <div className="flex mx-auto justify-between px-4 h-[36px] w-[80px]  items-center gap-2 bg-[#F6F6F6] rounded-lg">
                       <button
-                        onClick={() => handleDecreaseQuantity(card?._id)}
+                        onClick={() => handleDecreaseQuantity(card)}
                         className="text-[25px] text-[#3C4242]  font-lato"
                       >
                         -
@@ -308,7 +308,7 @@ const AddToCart = () => {
             </div>
             <img className="my-4" src="/grantotalLine.png" alt="" />
             <div className="flex py-2 justify-center">
-              <Link href={"/OrderSummery"}>
+              <Link to={'/OrderSummeryTwo'}>
                 <button
                   className=" rounded-lg py-[17px] px-[30px] text-white font-lato 
                      bg-[#f1592b] duration-500 ease-out  "

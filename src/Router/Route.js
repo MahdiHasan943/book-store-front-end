@@ -25,6 +25,7 @@ import Similar from "../pages/Home/products/Similar";
 import AddToCart from "../pages/addTocart/AddToCart";
 import Profile from "../pages/Profile/Profile";
 import OrderSummery from "../pages/OrderSummery/OrderSummery";
+import OrderSummeryTwo from "../pages/OrderSummery/OrderSummeryTwo";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/OrderSummeryTwo",
+        element: <OrderSummeryTwo/>,
       },
 
       { path: "/Service", element: <Service></Service> },

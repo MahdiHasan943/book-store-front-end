@@ -3,6 +3,8 @@ import "./AddToCart.css";
 import { ProductsContext } from "../../Context/AddTocartContext";
 import { AuthContext } from "../../Context/UserContext";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
+import LoadingTwo from "../../component/shared/loading/LoadingTwo";
 
 const AddToCart = () => {
   const { user } = useContext(AuthContext);
@@ -19,10 +21,13 @@ const AddToCart = () => {
     0
   );
   const grandTotal = subtotalPrice + shippin;
+  const [loading, setLoading] = useState({}); // Use an object for individual item loading states
+
   const handleDecreaseQuantity = async (item) => {
     if (item.quantity > 1) {
       // Update the local state to reflect the change
       updateCartItemQuantity(item._id, item.quantity - 1);
+      setLoading({ ...loading, [item._id]: true }); // Set loading for this item to true
 
       try {
         const response = await fetch(
@@ -38,6 +43,7 @@ const AddToCart = () => {
 
         if (response.ok) {
           // Item quantity was successfully updated in the database
+          setLoading({ ...loading, [item._id]: false }); // Set loading for this item back to false
         } else if (response.status === 404) {
           // Handle the case where the cart item is not found
         } else {
@@ -52,6 +58,7 @@ const AddToCart = () => {
   const handleIncreaseQuantity = async (item) => {
     // Update the local state to reflect the change
     updateCartItemQuantity(item._id, item.quantity + 1);
+    setLoading({ ...loading, [item._id]: true });
 
     try {
       const response = await fetch(
@@ -66,6 +73,8 @@ const AddToCart = () => {
       );
 
       if (response.ok) {
+        toast.success("Quantity updated");
+        setLoading({ ...loading, [item._id]: false });
         // Item quantity was successfully updated in the database
       } else if (response.status === 404) {
         // Handle the case where the cart item is not found
@@ -76,6 +85,7 @@ const AddToCart = () => {
       // Handle network errors or other exceptions
     }
   };
+
 
   return (
     <>
@@ -146,7 +156,7 @@ const AddToCart = () => {
                     >
                       -
                     </button>
-                    <p>{card?.quantity}</p>
+                    {loading[card?._id] ? <LoadingTwo /> : card?.quantity}
                     <button
                       onClick={() => handleIncreaseQuantity(card)}
                       className="font-lato text-[#3C4242]"
@@ -245,12 +255,12 @@ const AddToCart = () => {
                     </p>
                     <div className="flex mx-auto justify-between px-4 h-[36px] w-[80px]  items-center gap-2 bg-[#F6F6F6] rounded-lg">
                       <button
-                        onClick={() => handleDecreaseQuantity(card)}
+                        onClick={() => handleDecreaseQuantity(card?._id)}
                         className="text-[25px] text-[#3C4242]  font-lato"
                       >
                         -
                       </button>
-                      <p>{card?.quantity}</p>
+                      {loading[card?._id] ? <LoadingTwo /> : card?.quantity}
                       <button
                         onClick={() => handleIncreaseQuantity(card)}
                         className="font-lato text-[#3C4242]"
